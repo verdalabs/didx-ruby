@@ -2,7 +2,7 @@
 
 require_relative "did/version"
 
-module Did
+module DID
   class Error < StandardError; end
   # Your code goes here...
 end

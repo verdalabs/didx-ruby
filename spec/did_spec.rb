@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Did do
+RSpec.describe DID do
   it "has a version number" do
-    expect(Did::VERSION).not_to be nil
+    expect(DID::VERSION).not_to be nil
   end
 
   it "does something useful" do

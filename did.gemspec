@@ -4,7 +4,7 @@ require_relative "lib/did/version"
 
 Gem::Specification.new do |spec|
   spec.name = "did"
-  spec.version = Did::VERSION
+  spec.version = DID::VERSION
   spec.authors = ["Thomas Carr"]
   spec.email = ["9591402+htcarr3@users.noreply.github.com"]
 
