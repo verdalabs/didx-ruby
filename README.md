@@ -1,4 +1,4 @@
-# DID
+# DIDX
 
 TODO: Delete this and the text below, and describe your gem
 
@@ -6,19 +6,30 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add didx
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install didx
 
 ## Usage
 
-TODO: Write usage instructions here
+### Create new DID
+
+```ruby
+# Parse a did:web DID
+did_string = 'did:web:identity.foundation'
+
+did = DIDX(did_string)
+=> #<DIDX::Web:0x000000010bb1ad30 @id="did:web:identity.foundation", @method="web", @method_id="identity.foundation", @prefix="did"> 
+
+# Resolve to a did:web's DID Document 
+did.document
+=> #<DIDX::Document:0x000000010aa597d0 @assertion_method=nil, @authentication=nil, @context=["https://www.w3.org/ns/did/v1"], @document={"@context"=>["https://www.w3.org/ns/did/v1"], "id"=>"did:web:identity.foundation"}, @id="did:web:identity.foundation", @service=nil, @verification_method=nil>
+
+```
 
 ## Development
 
