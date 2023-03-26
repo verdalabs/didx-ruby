@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require "didx/version"
+
 require "didx/generic"
 require "didx/document"
 require "didx/web"

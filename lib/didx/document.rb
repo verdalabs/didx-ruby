@@ -1,3 +1,4 @@
+require 'json'
 module DIDX
   class Document
     attr_reader :document, :id, :context, :service,
