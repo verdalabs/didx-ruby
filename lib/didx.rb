@@ -5,18 +5,21 @@ require "didx/generic"
 require "didx/document"
 require "didx/web"
 require "didx/key"
+require "didx/ethr"
 
 module DIDX
 
   class Error < StandardError; end
 
   REGISTRY = {
-    "web" => DIDX::Web
+    web: DIDX::Web,
+    key: DIDX::Key,
+    ethr: DIDX::Ethr
   }.freeze
 
   def self.parse(did_string)
     did_method = parse_method(did_string)
-    did_method_class = self::REGISTRY[did_method]
+    did_method_class = self::REGISTRY[did_method.to_sym]
     did_method_class.new(did_string)
   end
 
@@ -34,7 +37,7 @@ module Kernel
   def DIDX(did)
     if did.is_a?(DIDX::Generic)
       did
-    elsif did = String.try_convert(did)
+    elsif (did = String.try_convert(did))
       DIDX.parse(did)
     else
       raise ArgumentError,

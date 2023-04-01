@@ -31,9 +31,7 @@ module DIDX
       raise NotImplementedError, "Subclass of DIDX::Generic must implement #resolve"
     end
 
-    def parse_method_id
-      raise NotImplementedError, "Subclass of DIDX::Generic must implement #parse_method_id"
-    end
+    def parse_method_id; end
 
   end
 end
