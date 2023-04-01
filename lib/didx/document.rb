@@ -1,4 +1,11 @@
-require 'json'
+# frozen_string_literal: true
+
+require "json"
+
+# class DIDX::Document is a class that represents a DID Document.
+# It is instantiated with a JSON string that conforms to the
+# DID Document specification:
+# https://w3c.github.io/did-core/#did-documents
 module DIDX
   class Document
     attr_reader :document, :id, :context, :service,

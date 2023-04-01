@@ -1,6 +1,8 @@
-require 'cgi'
-require 'uri'
-require 'net/http'
+# frozen_string_literal: true
+
+require "cgi"
+require "uri"
+require "net/http"
 
 module DIDX
   class Web < Generic

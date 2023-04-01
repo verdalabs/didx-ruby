@@ -23,11 +23,11 @@ If bundler is not being used to manage dependencies, install the gem by executin
 did_string = 'did:web:identity.foundation'
 
 did = DIDX(did_string)
-=> #<DIDX::Web:0x000000010bb1ad30 @id="did:web:identity.foundation", @method="web", @method_id="identity.foundation", @prefix="did"> 
+#<DIDX::Web:0x000000010bb1ad30 @id="did:web:identity.foundation", @method="web", @method_id="identity.foundation", @prefix="did"> 
 
 # Resolve to a did:web's DID Document 
 did.document
-=> #<DIDX::Document:0x000000010aa597d0 @assertion_method=nil, @authentication=nil, @context=["https://www.w3.org/ns/did/v1"], @document={"@context"=>["https://www.w3.org/ns/did/v1"], "id"=>"did:web:identity.foundation"}, @id="did:web:identity.foundation", @service=nil, @verification_method=nil>
+#<DIDX::Document:0x000000010aa597d0 @assertion_method=nil, @authentication=nil, @context=["https://www.w3.org/ns/did/v1"], @document={"@context"=>["https://www.w3.org/ns/did/v1"], "id"=>"did:web:identity.foundation"}, @id="did:web:identity.foundation", @service=nil, @verification_method=nil>
 
 ```
 
@@ -47,4 +47,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the DID project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/did/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the DIDX project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/did/blob/main/CODE_OF_CONDUCT.md).
