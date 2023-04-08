@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe DIDX::Key do
   context "when given a valid did:key" do
     let(:did) { DIDX::Ethr.new("did:ethr:0xb9c5714089478a327f09197987f16f9e5d936e8a") }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe DIDX::Web do
   context "when given a valid did:web" do
     let(:did) { DIDX::Web.new("did:web:identity.foundation") }

@@ -14,9 +14,13 @@ module DIDX
     attr_reader :document_uri
 
     private
+
     def resolve
       response = Net::HTTP.get_response(document_uri)
-      raise Error, "DID Document not found: #{response.inspect} for #{did.inspect}" unless response.is_a?(Net::HTTPSuccess)
+      unless response.is_a?(Net::HTTPSuccess)
+        raise Error,
+              "DID Document not found: #{response.inspect} for #{did.inspect}"
+      end
 
       response.body
     end
@@ -29,6 +33,5 @@ module DIDX
       uri.path << "/did.json"
       @document_uri = uri
     end
-
   end
 end

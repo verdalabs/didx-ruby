@@ -21,9 +21,8 @@ module DIDX
     end
 
     private
-    def resolve
 
-    end
+    def resolve; end
 
     def parse_method_id
       @eth_address = @method_id

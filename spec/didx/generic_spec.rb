@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe DIDX::Generic do
   context "when given a did with an invalid prefix" do
     let(:invalid_did_string) { "foo:web:bar" }
@@ -14,5 +16,4 @@ RSpec.describe DIDX::Generic do
       expect(DIDX::Generic.new(valid_did_string)).to be_instance_of(DIDX::Generic)
     end
   end
-
 end

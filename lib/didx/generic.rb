@@ -12,6 +12,7 @@ require "didx/document"
 module DIDX
   class Generic
     attr_reader :id, :prefix, :method, :method_id
+
     def initialize(did_string)
       @id = did_string
       @prefix, @method, @method_id = did_string.split(":", 3)
@@ -32,6 +33,5 @@ module DIDX
     end
 
     def parse_method_id; end
-
   end
 end

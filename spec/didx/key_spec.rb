@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe DIDX::Key do
   context "when given a valid did:key" do
     let(:did) { DIDX::Key.new("did:key:VALIDKEY") }

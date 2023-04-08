@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "didx/version"
 
 require "didx/generic"
@@ -8,7 +9,6 @@ require "didx/key"
 require "didx/ethr"
 
 module DIDX
-
   class Error < StandardError; end
 
   REGISTRY = {
@@ -30,7 +30,6 @@ module DIDX
   def self.default_split(did_string)
     did_string.split(":", 3)
   end
-
 end
 
 module Kernel
